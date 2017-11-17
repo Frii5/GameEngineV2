@@ -12,6 +12,16 @@ namespace GameEngineV2
 {
     public partial class Form1 : Form
     {
+        //Global variables
+
+        int x = 0;
+        double v;
+        double a;
+        int t;
+        double g = 9.82;
+        double y;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -74,12 +84,32 @@ namespace GameEngineV2
 
         private void FireButton_Click(object sender, EventArgs e)
         {
-
+            GameLoopTimer.Start();
         }
 
         private void GameLoopTimer_Tick(object sender, EventArgs e)
+        {
+            x++;
+            
+            a = Convert.ToDouble(InitialAngleTextBox.Text);
+            v = Convert.ToDouble(InitialVelocityTextBox.Text);
+            
+            if (x<100)
+            {
+                y = -g / (2 * Math.Pow(v, 2) * Math.Pow(Math.Cos(a), 2)) * Math.Pow(x, 2) + Math.Tan(a) * x;
+
+            } else {
+
+                GameLoopTimer.Stop();
+            }
+
+            ProjectilePosTextBox.Text = "Y: " + Convert.ToString(y);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
     }
 }
+

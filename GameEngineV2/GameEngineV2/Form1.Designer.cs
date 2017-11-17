@@ -42,6 +42,8 @@
             this.IsTargetHitTextBox = new System.Windows.Forms.TextBox();
             this.FireButton = new System.Windows.Forms.Button();
             this.GameLoopTimer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ProjectilePosLabel
@@ -57,7 +59,7 @@
             // TargetPosLabel
             // 
             this.TargetPosLabel.AutoSize = true;
-            this.TargetPosLabel.Location = new System.Drawing.Point(44, 75);
+            this.TargetPosLabel.Location = new System.Drawing.Point(44, 72);
             this.TargetPosLabel.Name = "TargetPosLabel";
             this.TargetPosLabel.Size = new System.Drawing.Size(157, 25);
             this.TargetPosLabel.TabIndex = 1;
@@ -67,7 +69,7 @@
             // InitialVelocityLabel
             // 
             this.InitialVelocityLabel.AutoSize = true;
-            this.InitialVelocityLabel.Location = new System.Drawing.Point(44, 114);
+            this.InitialVelocityLabel.Location = new System.Drawing.Point(44, 108);
             this.InitialVelocityLabel.Name = "InitialVelocityLabel";
             this.InitialVelocityLabel.Size = new System.Drawing.Size(144, 25);
             this.InitialVelocityLabel.TabIndex = 2;
@@ -77,7 +79,7 @@
             // InitialAngleLabel
             // 
             this.InitialAngleLabel.AutoSize = true;
-            this.InitialAngleLabel.Location = new System.Drawing.Point(44, 146);
+            this.InitialAngleLabel.Location = new System.Drawing.Point(44, 144);
             this.InitialAngleLabel.Name = "InitialAngleLabel";
             this.InitialAngleLabel.Size = new System.Drawing.Size(123, 25);
             this.InitialAngleLabel.TabIndex = 3;
@@ -87,7 +89,7 @@
             // IsTargetHitLabel
             // 
             this.IsTargetHitLabel.AutoSize = true;
-            this.IsTargetHitLabel.Location = new System.Drawing.Point(44, 183);
+            this.IsTargetHitLabel.Location = new System.Drawing.Point(44, 180);
             this.IsTargetHitLabel.Name = "IsTargetHitLabel";
             this.IsTargetHitLabel.Size = new System.Drawing.Size(140, 25);
             this.IsTargetHitLabel.TabIndex = 4;
@@ -111,7 +113,7 @@
             // 
             // TargetPosTextBox
             // 
-            this.TargetPosTextBox.Location = new System.Drawing.Point(233, 69);
+            this.TargetPosTextBox.Location = new System.Drawing.Point(233, 72);
             this.TargetPosTextBox.Name = "TargetPosTextBox";
             this.TargetPosTextBox.Size = new System.Drawing.Size(93, 31);
             this.TargetPosTextBox.TabIndex = 7;
@@ -119,7 +121,7 @@
             // 
             // InitialVelocityTextBox
             // 
-            this.InitialVelocityTextBox.Location = new System.Drawing.Point(233, 106);
+            this.InitialVelocityTextBox.Location = new System.Drawing.Point(233, 108);
             this.InitialVelocityTextBox.Name = "InitialVelocityTextBox";
             this.InitialVelocityTextBox.Size = new System.Drawing.Size(93, 31);
             this.InitialVelocityTextBox.TabIndex = 8;
@@ -127,7 +129,7 @@
             // 
             // InitialAngleTextBox
             // 
-            this.InitialAngleTextBox.Location = new System.Drawing.Point(233, 143);
+            this.InitialAngleTextBox.Location = new System.Drawing.Point(233, 144);
             this.InitialAngleTextBox.Name = "InitialAngleTextBox";
             this.InitialAngleTextBox.Size = new System.Drawing.Size(93, 31);
             this.InitialAngleTextBox.TabIndex = 9;
@@ -143,7 +145,7 @@
             // 
             // FireButton
             // 
-            this.FireButton.Location = new System.Drawing.Point(359, 36);
+            this.FireButton.Location = new System.Drawing.Point(353, 36);
             this.FireButton.Name = "FireButton";
             this.FireButton.Size = new System.Drawing.Size(110, 61);
             this.FireButton.TabIndex = 13;
@@ -155,11 +157,32 @@
             // 
             this.GameLoopTimer.Tick += new System.EventHandler(this.GameLoopTimer_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(694, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(694, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 25);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "label2";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 747);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.FireButton);
             this.Controls.Add(this.IsTargetHitTextBox);
             this.Controls.Add(this.InitialAngleTextBox);
@@ -195,6 +218,8 @@
         private System.Windows.Forms.TextBox IsTargetHitTextBox;
         private System.Windows.Forms.Button FireButton;
         private System.Windows.Forms.Timer GameLoopTimer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
