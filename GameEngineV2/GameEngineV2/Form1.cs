@@ -19,7 +19,67 @@ namespace GameEngineV2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //awkdlakwjdlawjdlkawjdla i wonr ro die in a hole of pitiful despair. please extrude my soul from my body and implant hells imbrace into my wretched sinnister being
+            
+        }
+
+        private void ProjectilePosLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TargetPosLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InitialVelocityLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InitialAngleLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IsTargetHitLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProjectilePosTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TargetPosTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InitialVelocityTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InitialAngleTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IsTargetHitTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FireButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GameLoopTimer_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
