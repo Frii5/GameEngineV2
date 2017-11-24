@@ -17,9 +17,10 @@ namespace GameEngineV2
         int x = 0;
         double v;
         double a;
-        int t;
+        int t = 0;
         double g = 9.82;
         double y;
+        double pos;
 
 
         public Form1()
@@ -89,21 +90,27 @@ namespace GameEngineV2
 
         private void GameLoopTimer_Tick(object sender, EventArgs e)
         {
-            x++;
+            t++;
             
             a = Convert.ToDouble(InitialAngleTextBox.Text);
             v = Convert.ToDouble(InitialVelocityTextBox.Text);
-            
-            if (x<100)
+
+            //a = (Math.PI / 180) * a;
+
+            if (t<100)
             {
-                y = -g / (2 * Math.Pow(v, 2) * Math.Pow(Math.Cos(a), 2)) * Math.Pow(x, 2) + Math.Tan(a) * x;
+                y = - (g / (2 * Math.Pow(v, 2) * ((1 + Math.Cos(2*a)) / 2))) * Math.Pow(t, 2) + Math.Tan(a) * t;
 
             } else {
 
                 GameLoopTimer.Stop();
             }
 
-            ProjectilePosTextBox.Text = "Y: " + Convert.ToString(y);
+            pos = v * Math.Cos(a) * t;
+            //pos = v * 0.0001f * t;
+            YPosLabel.Text = "Y: " + Convert.ToString(Math.Round(y,2));
+            XPosLabel.Text = "X: " + Convert.ToString(pos);           
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

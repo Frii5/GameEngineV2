@@ -42,8 +42,8 @@
             this.IsTargetHitTextBox = new System.Windows.Forms.TextBox();
             this.FireButton = new System.Windows.Forms.Button();
             this.GameLoopTimer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.XPosLabel = new System.Windows.Forms.Label();
+            this.YPosLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ProjectilePosLabel
@@ -155,34 +155,35 @@
             // 
             // GameLoopTimer
             // 
+            this.GameLoopTimer.Interval = 1000;
             this.GameLoopTimer.Tick += new System.EventHandler(this.GameLoopTimer_Tick);
             // 
-            // label1
+            // XPosLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(694, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.XPosLabel.AutoSize = true;
+            this.XPosLabel.Location = new System.Drawing.Point(694, 42);
+            this.XPosLabel.Name = "XPosLabel";
+            this.XPosLabel.Size = new System.Drawing.Size(70, 25);
+            this.XPosLabel.TabIndex = 14;
+            this.XPosLabel.Text = "label1";
+            this.XPosLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // YPosLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(694, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 25);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "label2";
+            this.YPosLabel.AutoSize = true;
+            this.YPosLabel.Location = new System.Drawing.Point(694, 87);
+            this.YPosLabel.Name = "YPosLabel";
+            this.YPosLabel.Size = new System.Drawing.Size(70, 25);
+            this.YPosLabel.TabIndex = 15;
+            this.YPosLabel.Text = "label2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(930, 747);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.YPosLabel);
+            this.Controls.Add(this.XPosLabel);
             this.Controls.Add(this.FireButton);
             this.Controls.Add(this.IsTargetHitTextBox);
             this.Controls.Add(this.InitialAngleTextBox);
@@ -218,8 +219,8 @@
         private System.Windows.Forms.TextBox IsTargetHitTextBox;
         private System.Windows.Forms.Button FireButton;
         private System.Windows.Forms.Timer GameLoopTimer;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label XPosLabel;
+        private System.Windows.Forms.Label YPosLabel;
     }
 }
 
